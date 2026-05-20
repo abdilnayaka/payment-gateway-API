@@ -40,8 +40,6 @@ The system automatically generates and manages a relational schema in PostgreSQL
 Success Response (200 OK):
 
 ```json
-JSON
-
 {
 "id": "e4f8c2b1-9a7d-4c3e-b2a1-8f7d6e5c4b3a",
 "merchantId": "MERCHANT-001",
@@ -58,7 +56,6 @@ Trigger: Attempting to process an empty merchant ID or a payload below Rp 10,000
 
 Payload Tested:
 ```json
-JSON
 {
 "merchantId": "",
 "amount": 5000
@@ -66,7 +63,6 @@ JSON
 ```
 Handled JSON Response (400 Bad Request):
 ```json
-JSON
 {
 "merchantId": "Merchant ID cannot be empty",
 "amount": "Minimum transaction amount is Rp 10,000"
@@ -99,7 +95,6 @@ cd payment-gateway-springboot
 Update your PostgreSQL credentials inside src/main/resources/application.properties:
 
 ```json
-Properties
 spring.datasource.url=jdbc:postgresql://localhost:5171/payment_gateway
 spring.datasource.username=YOUR_POSTGRES_USERNAME
 spring.datasource.password=YOUR_POSTGRES_PASSWORD
@@ -108,6 +103,5 @@ spring.datasource.password=YOUR_POSTGRES_PASSWORD
 3. Run the Application:
 Execute via your preferred IDE (IntelliJ IDEA) or run via terminal:
 ```json
-Bash
 ./mvnw spring-boot:run
 ```
